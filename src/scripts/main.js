@@ -16,17 +16,19 @@ const myPet = {
     },
     favoriteToys: [],
     play: function (toy) {
-        if (toy === "mouse" || toy === "box" || toy === "fish") {
+        if (toy.includes("fish")) {
+            this.favoriteToys.push(toy)
+        } else if (toy.includes("mouse")){
             this.favoriteToys.push(toy)
         }
-    }
-}
+    }}
 
 myPet.meow()
 myPet.purr()
 myPet.whine()
 
-myPet.play("fish")
+myPet.play("fish toy")
+myPet.play("mouse thing")
 myPet.play("ball")
 
 console.log(myPet.favoriteToys)
