@@ -13,6 +13,12 @@ const myPet = {
     },
     whine: function () {
         console.log("waaaaaah")
+    },
+    favoriteToys: [],
+    play: function (toy) {
+        if (toy === "mouse" || toy === "box" || toy === "fish") {
+            this.favoriteToys.push(toy)
+        }
     }
 }
 
@@ -20,4 +26,7 @@ myPet.meow()
 myPet.purr()
 myPet.whine()
 
+myPet.play("fish")
+myPet.play("ball")
 
+console.log(myPet.favoriteToys)
